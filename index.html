@@ -4,10 +4,64 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Rooster Enterprises — Stability Materials for Hardware</title>
-  <meta name="description" content="Industrial‑grade stability materials for hardware applications: anti‑vibration mounts, brackets, fasteners, and polymer stabilizers.">
+  <meta name="description" content="Industrial-grade stability materials for hardware applications: anti-vibration mounts, brackets, fasteners, and polymer stabilizers.">
   <link rel="icon" href="assets/favicon.svg">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    :root{
+      --bg:#ffffff; --panel:#ffffff; --card:#ffffff; --ink:#0b1220; --muted:#5b6b7f; --line:#e7edf5;
+      --accent:#0ea5e9; /* teal/sky */
+      --accent2:#f59e0b; /* amber */
+      --chip:#f5f8fb; --chip-b:#e7edf5;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);
+         background:
+          radial-gradient(900px 400px at -10% -10%, rgba(14,165,233,.08), transparent 60%),
+          radial-gradient(900px 400px at 110% 120%, rgba(245,158,11,.08), transparent 60%),
+          var(--bg)}
+    .wrap{width:min(1100px,92%);margin:0 auto}
+    .topbar{position:sticky;top:0;background:rgba(255,255,255,.9);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--line);z-index:20}
+    .topbar .wrap{display:flex;align-items:center;justify-content:space-between;padding:.7rem 0}
+    .brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:var(--ink);font-weight:800;letter-spacing:.02em}
+    nav a{margin-left:1rem;text-decoration:none;color:var(--ink)}
+    .btn{padding:.6rem .9rem;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border-radius:.6rem;text-decoration:none;font-weight:800;border:0;display:inline-block;box-shadow:0 10px 24px rgba(14,165,233,.18)}
+    .btn.ghost{background:#fff;color:var(--accent);border:2px solid var(--accent)}
+    .hero{padding:3.2rem 0 2rem;background:linear-gradient(180deg,transparent,rgba(14,165,233,.06))}
+    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:1.2rem;align-items:start}
+    .eyebrow{color:var(--accent);text-transform:uppercase;letter-spacing:.12em;font-size:.8rem;margin:0 0 .3rem}
+    h1{font-size:clamp(2rem,5vw,3rem);line-height:1.12;margin:.2rem 0 .8rem}
+    .lede{color:#334155;max-width:65ch}
+    .card{border:1px solid var(--line);border-radius:14px;padding:1rem;background:var(--card);box-shadow:0 8px 22px rgba(15,23,42,.06)}
+    .hero-art{width:100%;border-radius:12px;border:1px solid var(--line);background:linear-gradient(180deg,#fff,#f7fbff)}
+    .section{padding:3rem 0}
+    .section.alt{background:linear-gradient(180deg,transparent,#f7fafc)}
+    .cards.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
+    .product .shot{height:140px;border-radius:12px;border:1px solid var(--line);background:#ffffff;object-fit:cover;padding:14px}
+    .meta{color:#475569}
+    .muted{color:var(--muted)}
+    .filters{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1rem}
+    .chip{background:var(--chip);border:1px solid var(--chip-b);color:#0f172a;border-radius:999px;padding:.45rem .8rem;cursor:pointer}
+    .chip.active{border-color:var(--accent);box-shadow:0 0 0 2px rgba(14,165,233,.15)}
+    .industry-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:1rem;align-items:start}
+    .quality{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+    .table-wrap{overflow-x:auto}
+    .table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+    .table th,.table td{border-bottom:1px solid var(--line);padding:.7rem .6rem;text-align:left}
+    .table thead th{background:#fbfdff;color:#0f172a;font-weight:700}
+    .contact-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:1rem}
+    .form{display:grid;gap:.7rem}
+    label{display:grid;gap:.3rem;font-weight:600}
+    input,select,textarea{padding:.7rem .8rem;border:1px solid var(--line);border-radius:.6rem;background:#fff;color:#0f172a}
+    input::placeholder,textarea::placeholder{color:#94a3b8}
+    .badges{display:flex;gap:.6rem;flex-wrap:wrap;padding:0;margin:1rem 0 0}
+    .badges li{list-style:none;border:1px dashed var(--line);padding:.4rem .6rem;border-radius:.6rem;background:#fff;color:#334155}
+    .ticks{padding-left:1rem}
+    .ticks li{margin:.35rem 0}
+    .footer{border-top:1px solid var(--line);padding:1rem 0;color:#475569;background:#fff}
+    .w100{width:100%}
+    @media(max-width:900px){.hero-grid,.industry-grid,.quality,.contact-grid{grid-template-columns:1fr}}
+  </style>
 </head>
 <body>
   <header class="topbar">
@@ -31,13 +85,13 @@
       <div>
         <p class="eyebrow">Industrial • Reliable • Proven</p>
         <h1>Stability Materials for Demanding Hardware</h1>
-        <p class="lede">We engineer anti‑vibration mounts, structural brackets, precision fasteners and polymer stabilizers that keep your hardware <strong>stable</strong>, <strong>safe</strong>, and <strong>in spec</strong>.</p>
+        <p class="lede">We engineer anti-vibration mounts, structural brackets, precision fasteners and polymer stabilizers that keep your hardware <strong>stable</strong>, <strong>safe</strong>, and <strong>in spec</strong>.</p>
         <div class="cta">
           <a class="btn" href="#products">Explore Products</a>
           <a class="btn ghost" href="#contact">Request a Quote</a>
         </div>
         <ul class="badges">
-          <li>ISO‑grade sourcing</li>
+          <li>ISO-grade sourcing</li>
           <li>Batch traceability</li>
           <li>Custom formulations</li>
         </ul>
@@ -57,14 +111,18 @@
     <div class="wrap">
       <h2>Products</h2>
       <p class="muted">Built for factories, devices, and field installations. Select a category to filter.</p>
+
       <div class="filters">
         <button class="chip active" data-filter="all">All</button>
-        <button class="chip" data-filter="mounts">Anti‑Vibration Mounts</button>
+        <button class="chip" data-filter="mounts">Anti-Vibration Mounts</button>
         <button class="chip" data-filter="brackets">Structural Brackets</button>
         <button class="chip" data-filter="fasteners">Precision Fasteners</button>
         <button class="chip" data-filter="polymers">Polymer Stabilizers</button>
       </div>
-      <div id="grid" class="grid cards"></div>
+
+      <div id="grid" class="grid cards">
+        <!-- Items injected by JS -->
+      </div>
     </div>
   </section>
 
@@ -74,10 +132,10 @@
         <h2>Industries We Support</h2>
         <ul class="ticks">
           <li>Electronics & Appliances — noise & vibration control</li>
-          <li>Automotive & EV — thermal‑stable mounts and bushings</li>
+          <li>Automotive & EV — thermal-stable mounts and bushings</li>
           <li>Industrial Machinery — high load brackets & fasteners</li>
-          <li>Construction Hardware — corrosion‑resistant assemblies</li>
-          <li>Renewables — weather‑grade stabilization</li>
+          <li>Construction Hardware — corrosion-resistant assemblies</li>
+          <li>Renewables — weather-grade stabilization</li>
         </ul>
       </div>
       <div class="card">
@@ -92,9 +150,9 @@
         <h3>Quality & Compliance</h3>
         <ul class="ticks">
           <li>Materials tested for tensile, compression, shear & fatigue</li>
-          <li>Lot‑wise QA reports; dimensional checks to ±0.05 mm</li>
-          <li>Environmental compliance: RoHS, REACH, Proposition‑65</li>
-          <li>Surface treatments: Zn‑Ni, phosphate, e‑coat, epoxy</li>
+          <li>Lot-wise QA reports; dimensional checks to ±0.05 mm</li>
+          <li>Environmental compliance: RoHS, REACH, Proposition-65</li>
+          <li>Surface treatments: Zn-Ni, phosphate, e-coat, epoxy</li>
         </ul>
       </div>
       <div class="card">
@@ -103,7 +161,7 @@
           <li>Engineering support for fit, form, function</li>
           <li>Custom blends for damping & thermal stability</li>
           <li>Fast prototyping and pilot runs</li>
-          <li>Reliable lead times and export‑friendly packing</li>
+          <li>Reliable lead times and export-friendly packing</li>
         </ul>
       </div>
     </div>
@@ -119,7 +177,8 @@
               <th>SKU</th><th>Category</th><th>Load Rating</th><th>Temp Range</th><th>Finish/Blend</th><th>Notes</th>
             </tr>
           </thead>
-          <tbody id="spec-body"></tbody>
+          <tbody id="spec-body">
+          </tbody>
         </table>
       </div>
     </div>
@@ -129,15 +188,15 @@
     <div class="wrap contact-grid">
       <div class="card">
         <h2>Request a Quote</h2>
-        <form class="form" name="rfq" data-netlify="true" method="POST">
-          <input type="hidden" name="form-name" value="rfq">
+        <!-- If using Cloudflare Pages, swap 'action' to a Formspree endpoint -->
+        <form class="form" name="rfq" method="POST">
           <label><span>Your Name</span><input name="name" required></label>
           <label><span>Company</span><input name="company"></label>
           <label><span>Email</span><input name="email" type="email" required></label>
           <label><span>Phone</span><input name="phone" type="tel"></label>
           <label><span>Product Interest</span>
             <select name="interest">
-              <option>Anti‑Vibration Mounts</option>
+              <option>Anti-Vibration Mounts</option>
               <option>Structural Brackets</option>
               <option>Precision Fasteners</option>
               <option>Polymer Stabilizers</option>
@@ -164,15 +223,15 @@
   </footer>
 
   <script>
+  // Sample data (same items, rendered client-side)
   const products = [
-    {sku:'AVM-40', name:'AV Mount 40', cat:'mounts', load:'3.0 kN', temp:'-30 to 120°C', finish:'NBR 70A + zinc insert', img:'av-mount.svg', notes:'General duty anti‑vibration mount'},
+    {sku:'AVM-40', name:'AV Mount 40', cat:'mounts', load:'3.0 kN', temp:'-30 to 120°C', finish:'NBR 70A + zinc insert', img:'av-mount.svg', notes:'General duty anti-vibration mount'},
     {sku:'AVM-80', name:'AV Mount 80', cat:'mounts', load:'7.5 kN', temp:'-30 to 150°C', finish:'EPDM 70A + SS insert', img:'av-mount.svg', notes:'High temp & corrosion resistant'},
-    {sku:'BRK-L90', name:'L‑Bracket 90', cat:'brackets', load:'12 kN', temp:'-40 to 180°C', finish:'Zn‑Ni plated steel', img:'bracket.svg', notes:'Structural L bracket'},
-    {sku:'BRK-U120', name:'U‑Clamp 120', cat:'brackets', load:'9 kN', temp:'-40 to 180°C', finish:'E‑coat', img:'bracket.svg', notes:'Pipe/rail stabilization'},
+    {sku:'BRK-L90', name:'L-Bracket 90', cat:'brackets', load:'12 kN', temp:'-40 to 180°C', finish:'Zn-Ni plated steel', img:'bracket.svg', notes:'Structural L bracket'},
+    {sku:'BRK-U120', name:'U-Clamp 120', cat:'brackets', load:'9 kN', temp:'-40 to 180°C', finish:'E-coat', img:'bracket.svg', notes:'Pipe/rail stabilization'},
     {sku:'FSR-M8', name:'Hex Bolt M8', cat:'fasteners', load:'Class 10.9', temp:'-40 to 180°C', finish:'Phosphate + oil', img:'fastener.svg', notes:'Precision fastener'},
     {sku:'PLR-DM', name:'Damping Blend DM', cat:'polymers', load:'—', temp:'-20 to 140°C', finish:'Polymer compound', img:'polymer.svg', notes:'High damping coefficient'}
   ];
-
   const grid = document.getElementById('grid');
   const tbody = document.getElementById('spec-body');
   const chips = document.querySelectorAll('.chip');
@@ -200,7 +259,7 @@
     render(f === 'all' ? products : products.filter(p => p.cat === f));
   }));
   render(products);
-  y.textContent = new Date().getFullYear();
+  document.getElementById('y').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
