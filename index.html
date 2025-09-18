@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rooster Enterprises — Stability Materials for Hardware</title>
+  <meta name="description" content="Industrial‑grade stability materials for hardware applications: anti‑vibration mounts, brackets, fasteners, and polymer stabilizers.">
+  <link rel="icon" href="assets/favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap">
+      <a class="brand" href="#home">
+        <img src="assets/logo.svg" alt="Rooster Enterprises logo" width="36" height="36">
+        <span>Rooster Enterprises</span>
+      </a>
+      <nav>
+        <a href="#products">Products</a>
+        <a href="#industries">Industries</a>
+        <a href="#quality">Quality</a>
+        <a href="#specs">Specs</a>
+        <a class="btn" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Industrial • Reliable • Proven</p>
+        <h1>Stability Materials for Demanding Hardware</h1>
+        <p class="lede">We engineer anti‑vibration mounts, structural brackets, precision fasteners and polymer stabilizers that keep your hardware <strong>stable</strong>, <strong>safe</strong>, and <strong>in spec</strong>.</p>
+        <div class="cta">
+          <a class="btn" href="#products">Explore Products</a>
+          <a class="btn ghost" href="#contact">Request a Quote</a>
+        </div>
+        <ul class="badges">
+          <li>ISO‑grade sourcing</li>
+          <li>Batch traceability</li>
+          <li>Custom formulations</li>
+        </ul>
+      </div>
+      <div class="card hero-card">
+        <img src="assets/hero-stability.svg" alt="Stability concept graphic" class="hero-art">
+        <ul class="list small">
+          <li>Load ratings up to 12kN</li>
+          <li>Thermal range −40°C to 180°C</li>
+          <li>RoHS & REACH compliant</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="products">
+    <div class="wrap">
+      <h2>Products</h2>
+      <p class="muted">Built for factories, devices, and field installations. Select a category to filter.</p>
+      <div class="filters">
+        <button class="chip active" data-filter="all">All</button>
+        <button class="chip" data-filter="mounts">Anti‑Vibration Mounts</button>
+        <button class="chip" data-filter="brackets">Structural Brackets</button>
+        <button class="chip" data-filter="fasteners">Precision Fasteners</button>
+        <button class="chip" data-filter="polymers">Polymer Stabilizers</button>
+      </div>
+      <div id="grid" class="grid cards"></div>
+    </div>
+  </section>
+
+  <section class="section alt" id="industries">
+    <div class="wrap industry-grid">
+      <div>
+        <h2>Industries We Support</h2>
+        <ul class="ticks">
+          <li>Electronics & Appliances — noise & vibration control</li>
+          <li>Automotive & EV — thermal‑stable mounts and bushings</li>
+          <li>Industrial Machinery — high load brackets & fasteners</li>
+          <li>Construction Hardware — corrosion‑resistant assemblies</li>
+          <li>Renewables — weather‑grade stabilization</li>
+        </ul>
+      </div>
+      <div class="card">
+        <img src="assets/industry-grid.svg" alt="Industries illustration" class="w100">
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="quality">
+    <div class="wrap quality">
+      <div class="card">
+        <h3>Quality & Compliance</h3>
+        <ul class="ticks">
+          <li>Materials tested for tensile, compression, shear & fatigue</li>
+          <li>Lot‑wise QA reports; dimensional checks to ±0.05 mm</li>
+          <li>Environmental compliance: RoHS, REACH, Proposition‑65</li>
+          <li>Surface treatments: Zn‑Ni, phosphate, e‑coat, epoxy</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Why Rooster?</h3>
+        <ul class="ticks">
+          <li>Engineering support for fit, form, function</li>
+          <li>Custom blends for damping & thermal stability</li>
+          <li>Fast prototyping and pilot runs</li>
+          <li>Reliable lead times and export‑friendly packing</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="specs">
+    <div class="wrap">
+      <h2>Technical Snapshot</h2>
+      <div class="table-wrap">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>SKU</th><th>Category</th><th>Load Rating</th><th>Temp Range</th><th>Finish/Blend</th><th>Notes</th>
+            </tr>
+          </thead>
+          <tbody id="spec-body"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="wrap contact-grid">
+      <div class="card">
+        <h2>Request a Quote</h2>
+        <form class="form" name="rfq" data-netlify="true" method="POST">
+          <input type="hidden" name="form-name" value="rfq">
+          <label><span>Your Name</span><input name="name" required></label>
+          <label><span>Company</span><input name="company"></label>
+          <label><span>Email</span><input name="email" type="email" required></label>
+          <label><span>Phone</span><input name="phone" type="tel"></label>
+          <label><span>Product Interest</span>
+            <select name="interest">
+              <option>Anti‑Vibration Mounts</option>
+              <option>Structural Brackets</option>
+              <option>Precision Fasteners</option>
+              <option>Polymer Stabilizers</option>
+            </select>
+          </label>
+          <label><span>Message</span><textarea name="message" rows="4" placeholder="Load/size, environment, quantity, deadlines"></textarea></label>
+          <button class="btn" type="submit">Send Request</button>
+        </form>
+      </div>
+      <div class="card info">
+        <h3>Contact</h3>
+        <p><strong>Rooster Enterprises</strong><br>123 Industrial Estate, Your City</p>
+        <p><a href="tel:+911234567890">+91 12345 67890</a> • <a href="mailto:sales@rooster-enterprises.com">sales@rooster-enterprises.com</a></p>
+        <p class="muted">Mon–Sat • 9:00 AM – 6:00 PM</p>
+        <img src="assets/iso-shield.svg" alt="Quality shield icon" width="120">
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p>© <span id="y"></span> Rooster Enterprises • Stability Materials for Hardware</p>
+    </div>
+  </footer>
+
+  <script>
+  const products = [
+    {sku:'AVM-40', name:'AV Mount 40', cat:'mounts', load:'3.0 kN', temp:'-30 to 120°C', finish:'NBR 70A + zinc insert', img:'av-mount.svg', notes:'General duty anti‑vibration mount'},
+    {sku:'AVM-80', name:'AV Mount 80', cat:'mounts', load:'7.5 kN', temp:'-30 to 150°C', finish:'EPDM 70A + SS insert', img:'av-mount.svg', notes:'High temp & corrosion resistant'},
+    {sku:'BRK-L90', name:'L‑Bracket 90', cat:'brackets', load:'12 kN', temp:'-40 to 180°C', finish:'Zn‑Ni plated steel', img:'bracket.svg', notes:'Structural L bracket'},
+    {sku:'BRK-U120', name:'U‑Clamp 120', cat:'brackets', load:'9 kN', temp:'-40 to 180°C', finish:'E‑coat', img:'bracket.svg', notes:'Pipe/rail stabilization'},
+    {sku:'FSR-M8', name:'Hex Bolt M8', cat:'fasteners', load:'Class 10.9', temp:'-40 to 180°C', finish:'Phosphate + oil', img:'fastener.svg', notes:'Precision fastener'},
+    {sku:'PLR-DM', name:'Damping Blend DM', cat:'polymers', load:'—', temp:'-20 to 140°C', finish:'Polymer compound', img:'polymer.svg', notes:'High damping coefficient'}
+  ];
+
+  const grid = document.getElementById('grid');
+  const tbody = document.getElementById('spec-body');
+  const chips = document.querySelectorAll('.chip');
+  const y = document.getElementById('y');
+
+  function card(p){
+    return `
+    <article class="card product ${p.cat}">
+      <img class="shot" src="assets/${p.img}" alt="${p.name}">
+      <h3>${p.name}</h3>
+      <p class="muted">${p.sku} • ${p.finish}</p>
+      <p class="meta"><strong>Load:</strong> ${p.load} &nbsp; <strong>Temp:</strong> ${p.temp}</p>
+    </article>`;
+  }
+  function render(list){
+    grid.innerHTML = list.map(card).join('');
+    tbody.innerHTML = list.map(p => `<tr>
+      <td>${p.sku}</td><td>${p.name}</td><td>${p.load}</td><td>${p.temp}</td><td>${p.finish}</td><td>${p.notes}</td>
+    </tr>`).join('');
+  }
+  chips.forEach(ch => ch.addEventListener('click', () => {
+    chips.forEach(c => c.classList.remove('active'));
+    ch.classList.add('active');
+    const f = ch.dataset.filter;
+    render(f === 'all' ? products : products.filter(p => p.cat === f));
+  }));
+  render(products);
+  y.textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
